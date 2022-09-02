@@ -1,0 +1,11 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('/');
+
+dia = lines.shift()
+mes = lines.shift()
+ano = lines.shift()
+
+
+console.log(mes + "/" + dia + "/" + ano)
+console.log(ano + "/" + mes + "/" + dia)
+console.log(dia + "-" + mes + "-" + ano)

@@ -1,0 +1,30 @@
+//var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+
+
+var inputDias = parseInt(lines)
+var dias = 0
+var meses = 0
+var anos = 0
+
+
+    anos = Math.floor(inputDias/365)
+    meses = Math.floor((inputDias - (anos * 365)) / 30)
+    dias = (inputDias - (anos * 365)) % 30
+
+
+console.log(anos + " ano(s)\n" +  meses + " mes(es)\n" + dias + " dia(s)")
+
+
+
+
+
+
+
+
+
+
+
+

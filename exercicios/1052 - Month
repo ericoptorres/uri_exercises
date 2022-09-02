@@ -1,0 +1,47 @@
+//var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var mes = parseInt(lines.shift())
+var mesNome = ""
+
+if (mes == 1){
+    mesNome = "January"
+}
+else if (mes == 2){
+    mesNome = "February"
+}
+else if (mes == 3){
+    mesNome = "March"
+}
+else if (mes == 4){
+    mesNome = "April"
+}
+else if (mes == 5){
+    mesNome = "May"
+}
+else if (mes == 6){
+    mesNome = "June"
+}
+else if (mes == 7){
+    mesNome = "July"
+}
+else if (mes == 8){
+    mesNome = "August"
+}
+else if (mes == 9){
+    mesNome = "September"
+}
+else if (mes == 10){
+    mesNome = "October"
+}
+else if (mes == 11){
+    mesNome = "November"
+}
+else if (mes == 12){
+    mesNome = "December"
+}
+else {
+    Invalid
+}
+console.log(mesNome)

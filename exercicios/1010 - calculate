@@ -1,0 +1,17 @@
+//var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+
+
+var a = lines.shift().split(' ')
+var b = lines.shift().split(' ')
+
+
+var valor1 = a[1] * a[2]
+var valor2 = b[1] * b[2]
+var valorTotal = valor1 + valor2
+
+
+
+console.log("VALOR A PAGAR: R$", valorTotal.toFixed(2) )

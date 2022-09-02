@@ -1,0 +1,32 @@
+//var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+
+
+var inputseconds = parseInt(lines)
+var seconds = 0
+var minutes = 0
+var hours = 0
+
+
+
+
+    seconds = inputseconds % 60
+    minutes = (((inputseconds - seconds) % 3600) / 60)
+    hours = Math.floor(inputseconds / 3600)
+
+
+console.log(hours + ":" + minutes + ":" + seconds)
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+//var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+
+
+var distancia = parseInt(lines)
+
+var min = (distancia / 30) * 60
+
+console.log(min, "minutos")
+
+
+
+//car X 60km/h
+//car Y 90km/h
+//velocidae relativa é 30km/h 30km/60min   d= v*t > t= d/v
