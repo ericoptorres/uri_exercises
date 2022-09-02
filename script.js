@@ -5,19 +5,19 @@ var input = require('fs').readFileSync('stdin', 'utf8');
 var lines = input.split('/');
 
 
+function display(a, b){
+   console.log(a,b)
+}
+
+display("eu","amo")
 
 
-alterado
 
-var dia = lines.shift()
-var mes = lines.shift()
-var ano = lines.shift()
-
-
-console.log(`${mes}/${dia}/${ano}`);
-console.log(`${ano}/${mes}/${dia}`);
-console.log(`${dia}-${mes}-${ano}`);
-
+var prompt = require('prompt-sync')();
+//
+// get input from the user.
+//
+var n = prompt('How many more times? ');
 
 
 

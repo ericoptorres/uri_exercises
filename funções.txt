@@ -1,0 +1,15 @@
+funçoes
+
+
+
+split() - divide uma STRING em um vetor de STRINGS divididos pelo argumento separador (note que usando index - index[1] retorna o segundo string do vetor
+
+shift() - remove o primeiro elemento do vetor (array) e aplica na variavel - note que o vetor inicial é alterado
+
+join () - concatena ("soma") as strings de um vetor em uma única string utilizando o argumento como separador (caso não utilize argumento, será utilizado virgula ,)
+
+
+trim ()
+trimEnd()
+[00:04]
+trimStart()
