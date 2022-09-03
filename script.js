@@ -1,25 +1,22 @@
 const { Console } = require('console');
+const { clearScreenDown } = require('readline');
 
 //var input = require('fs').readFileSync('/dev/stdin', 'utf8');
 var input = require('fs').readFileSync('stdin', 'utf8');
-var lines = input.split('/');
-
-
-function display(a, b){
-   console.log(a,b)
-}
-
-display("eu","amo")
-
-
+var lines = input.split('\n');
 
 var prompt = require('prompt-sync')();
 //
 // get input from the user.
 //
-var n = prompt('How many more times? ');
+
+let a = parseInt(lines.shift())
+let b = parseInt(lines.shift())
+
+let soma = a + b
 
 
+console.log("SOMA = " + soma)
 
 
 
