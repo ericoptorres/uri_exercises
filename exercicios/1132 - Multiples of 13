@@ -1,0 +1,48 @@
+const { Console } = require('console');
+const { clearScreenDown } = require('readline');
+
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = require('prompt-sync')();
+
+const { Console } = require('console');
+const { clearScreenDown } = require('readline');
+
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = require('prompt-sync')();
+
+let num1 = parseInt(lines.shift())
+let num2 = parseInt(lines.shift())
+let soma = 0
+if (num1 < num2){
+  let i = num1
+  for (i ; i <= num2 ; i++ ){
+    if (i % 13 != 0){
+      soma = soma + i
+      
+    }
+
+  }
+  console.log(soma)
+}
+else if (num2 < num1){
+  {
+    let i = num2
+    for (i ; i <= num1 ; i++ ){
+      if (i % 13 != 0){
+        soma = soma + i
+        
+      }
+  
+    }
+    console.log(soma)
+  }
+}
+
+
+
+
+

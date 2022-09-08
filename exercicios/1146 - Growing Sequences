@@ -1,0 +1,17 @@
+const { Console } = require('console');
+const { clearScreenDown } = require('readline');
+
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = require('prompt-sync')();
+
+let x = parseInt(lines) 
+let y = []
+
+for (let i = 1 ; i <= x ; i++ ){
+  y.push(i)
+}
+
+let sequencia = y.join(' ')
+console.log(sequencia)

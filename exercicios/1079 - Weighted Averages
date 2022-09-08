@@ -1,0 +1,16 @@
+const { Console } = require('console');
+const { clearScreenDown } = require('readline');
+
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = require('prompt-sync')();
+
+
+let number1 = parseFloat(lines.shift())
+let number2 = parseFloat(lines.shift())
+let number3 = parseFloat(lines.shift())
+
+weightedAverage = (number1 * 2 + number2 * 3 + number3 * 5) / 10
+
+console.log(weightedAverage.toFixed(1))
