@@ -1,17 +1,16 @@
-const { Console } = require('console');
-const { clearScreenDown } = require('readline');
-
 var input = require('fs').readFileSync('stdin', 'utf8');
 var lines = input.split('\n');
 
 var prompt = require('prompt-sync')();
 
-let x = parseInt(lines) 
-let y = []
+let valor 
+let vetor = []
 
-for (let i = 1 ; i <= x ; i++ ){
-  y.push(i)
+while(valor = parseInt(lines.shift())){
+  while(valor--){
+    vetor.unshift(valor+1)
+  }
+  let sequencia = vetor.join(' ')
+  console.log(sequencia)
+  vetor = []
 }
-
-let sequencia = y.join(' ')
-console.log(sequencia)

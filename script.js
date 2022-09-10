@@ -1,40 +1,20 @@
+
+
 var input = require('fs').readFileSync('stdin', 'utf8');
 var lines = input.split('\n');
 
 var prompt = require('prompt-sync')();
 
-let array = []
-let operacao = lines.shift().trim()
-
-for(let j=0; j<12;j++){
-let aux = []
-
-for (let i = 0; i < 12 ; i++){
-  aux.push(parseFloat(lines.shift()))
-}
-array.push(aux)
-}
-
 let soma = 0
-let media = 0
-let uni = 0
+let valor
+let i = 0
+let resultado = 0
 
-
-for (let m = 0 ; m < 12 ; m++){
-  for (let n = 0 ; n < 12 ; n++)
-    if (m < n){
-      soma += array[m][n]
-      uni++
-    }
+while ((valor = (parseInt(lines.shift()))) >= 0 ){
+  soma = soma + valor 
+  i++
 }
-media = soma / uni
+resultado = (soma / i).toFixed(2)
+console.log(resultado)
 
-switch (operacao){
-  case "S": 
-    console.log(soma.toFixed(1))
-    break;
-  case "M": 
-    console.log(media.toFixed(1))
-    break;
-}
 

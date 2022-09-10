@@ -1,3 +1,6 @@
+const { Console } = require('console');
+const { clearScreenDown } = require('readline');
+
 var input = require('fs').readFileSync('stdin', 'utf8');
 var lines = input.split('\n');
 
@@ -11,6 +14,9 @@ let resultado = 0
 while ((valor = (parseInt(lines.shift()))) >= 0 ){
   soma = soma + valor 
   i++
+  console.log(soma)
 }
 resultado = (soma / i).toFixed(2)
 console.log(resultado)
+
+
