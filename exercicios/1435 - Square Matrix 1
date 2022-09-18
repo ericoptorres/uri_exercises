@@ -1,0 +1,77 @@
+const { clearScreenDown } = require('readline');
+
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = require('prompt-sync')();
+
+
+let valor
+let m = 1
+let n = 1
+let size = parseInt(lines.shift())
+let array = []
+let matriz = []
+
+
+while (size){
+        while (m <= size){
+            while (n <= size){
+                if (m == 1 || m == size || n == 1|| n == size){   
+                    valor = 1
+                }
+                else {
+                    valor = 2
+                }
+                array.push(valor)
+                n++  
+            }
+            matriz.push(array)
+            array = []
+            n = 1
+            m++
+        }
+        console.log(matriz, "\n")
+        m = 1
+        matriz = []
+        size = parseInt(lines.shift())
+    }
+
+
+/*const { clearScreenDown } = require('readline');
+
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = require('prompt-sync')();
+
+let m = 0
+let n = 0
+let number = 4
+let array = []
+let matriz = []
+
+
+
+    while (m < number){
+        while (n < number){
+            if (m == 3){
+                array[n] = 1
+                    
+            }
+            else{
+                array[n] = 2  
+            }
+            n++  
+        }
+
+        console.log(array, "loop", m)
+        matriz.push(array)
+        console.log(matriz)
+        n = 0
+        m++
+    }
+
+
+
+    */
