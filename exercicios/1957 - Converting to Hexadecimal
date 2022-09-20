@@ -1,0 +1,45 @@
+const { clearScreenDown } = require('readline');
+
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = require('prompt-sync')();
+
+
+let number = parseInt(lines)
+let resultado = []
+let aux
+
+while (number >= 16){
+    aux = number % 16
+    resultado.unshift(aux)
+    number = (number - aux) / 16
+}
+resultado.unshift(number)
+
+let size = resultado.length
+while (size){
+    switch (resultado[size - 1]){
+        case 10:
+            resultado[size - 1] = "A"
+            break;
+        case 11:
+            resultado[size - 1] = "B"
+            break;
+        case 12:
+            resultado[size - 1] = "C"
+            break;
+        case 13:
+            resultado[size - 1] = "D"
+            break;
+        case 14:
+            resultado[size - 1] = "E"
+            break;
+        case 15:
+            resultado[size - 1] = "F"
+            break;
+        }
+        size--
+    }
+
+console.log(resultado.join(''))
