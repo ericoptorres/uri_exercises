@@ -3,14 +3,3 @@ var lines = input.split('\n');
 
 var prompt = require('prompt-sync')();
 
-let number = parseInt(lines.shift())
-
-let i = 1
-
-while (i <= number){
-    if ((number % i) == 0){
-        console.log(i)
-    } 
-    i++
-}
-
