@@ -1,0 +1,12 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = require('prompt-sync')();
+
+let number = parseInt(lines.shift())
+let hours = parseInt(lines.shift())
+let moneyHour = parseFloat(lines.shift())
+let result = hours * moneyHour
+
+console.log("NUMBER =", number)
+console.log("SALARY = U$", result.toFixed(2))
