@@ -1,0 +1,19 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = require('prompt-sync')();
+
+
+let j = 0
+let i = 6
+let soma = 0
+while (i--){
+    let value = parseFloat(lines.shift())
+    if (value > 0){
+        j++
+        soma = soma + value
+    }
+}
+
+resultado = soma / j
+console.log(j, "valores positivos\n" + resultado.toFixed(1))
