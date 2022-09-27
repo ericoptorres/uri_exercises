@@ -17,3 +17,5 @@ while (i--){
 
 resultado = soma / j
 console.log(j, "valores positivos\n" + resultado.toFixed(1))
+
+//wrong??
