@@ -1,0 +1,24 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+let [ x, y ] = lines
+
+x = parseInt(x)
+y = parseInt(y)
+let number = 0
+let aux = 0
+
+if (x > y){
+    aux = x
+    x = y
+    y = aux
+}
+
+number = x + 1
+while (number < y){
+    if (number % 5 == 2 || number % 5 == 3){
+        console.log(number)
+        
+    }
+    number++
+}
