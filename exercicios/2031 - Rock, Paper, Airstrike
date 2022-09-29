@@ -1,0 +1,49 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+let n = parseInt(lines.shift())
+
+let player1
+let player2
+
+while (n--){
+    player1 = lines.shift().trim()
+    player2 = lines.shift().trim()
+    switch (player1){
+        case "ataque":
+            if (player2 == "papel"){
+                console.log("Jogador 1 venceu")
+            }
+            else if (player2 == "pedra"){
+                console.log("Jogador 1 venceu")
+            }
+            else if (player2 == "ataque"){
+                console.log("Aniquilacao mutua")
+            }
+            break;
+        case "pedra":
+            if (player2 == "papel"){
+                console.log("Jogador 1 venceu")
+            }
+            else if (player2 == "pedra"){
+                console.log("Sem ganhador")
+            }
+            else if (player2 == "ataque"){
+                console.log("Jogador 2 venceu")
+            }
+            break;      
+        case "papel":
+            if (player2 == "papel"){
+                console.log("Ambos venceram")
+            }
+            else if (player2 == "pedra"){
+                console.log("Jogador 2 venceu")
+            }
+            else if (player2 == "ataque"){
+                console.log("Jogador 2 venceu")
+            }
+            break;
+        default:
+            console.log("default")         
+        }
+}            
