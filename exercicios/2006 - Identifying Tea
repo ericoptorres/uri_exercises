@@ -1,0 +1,17 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+const teatype = lines.shift().trim()
+let participants = lines.shift().split(' ')
+
+
+
+let i = 0
+let count = 0
+while (i < 5){
+    if (participants[i] == teatype){
+        count++
+    }
+    i++
+}
+console.log(count)
