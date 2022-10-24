@@ -1,0 +1,14 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+let temp = lines.shift().split(' ')
+
+let a = parseInt(temp.shift())
+let b = parseInt(temp.shift())
+
+if (a == b || a > b){
+    console.log(a)
+}
+else {
+    console.log(b)
+}
