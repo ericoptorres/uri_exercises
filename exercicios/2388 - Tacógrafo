@@ -1,0 +1,22 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+
+let intervals = parseInt(lines.shift())
+let i = 0
+let timeSpent
+let aux
+let totalDistance = 0
+
+while (i < intervals){
+    aux = lines.shift().split(' ')
+
+    timeSpent = parseInt(aux[0])
+    averageSpeed = parseInt(aux[1])
+
+    totalDistance = totalDistance + (timeSpent * averageSpeed)
+    i++
+   }
+
+   console.log(totalDistance)
+
