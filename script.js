@@ -1,33 +1,5 @@
 var input = require('fs').readFileSync('stdin', 'utf8');
 var lines = input.split('\n');
 
-function largestOfFour(arr) {
-    let i = 0
-    let j 
-    let greater
-    let newArr = []
-    while (i < 4){
-        j = 0
-        while (j < 4){
-            if (j == 0){
-                greater = arr[i][j]
-            }
-            else {
-                if (arr[i][j] > greater){
-                    greater = arr[i][j]
-                }
-            }
-            j++
-            if (j == 4){
-                newArr.push(greater)
-            }
-        }
-        console.log(greater)
-        i++
-    }
-    console.log(newArr)
-    return newArr;
-  }
-  
-  largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
 

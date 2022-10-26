@@ -1,0 +1,9 @@
+function confirmEnding(str, target) {
+    
+    let size = target.length
+
+    if (str.slice(-size) == target){
+      return true
+    }
+    else return false
+  }
