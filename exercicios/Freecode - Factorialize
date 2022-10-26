@@ -1,0 +1,11 @@
+function factorialize(num) {
+    let factorial = 1
+    while(num){
+    factorial = factorial * num
+    num--
+    }
+    return factorial;
+
+  }
+  
+  factorialize(5);
