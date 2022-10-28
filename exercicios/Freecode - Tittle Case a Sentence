@@ -1,8 +1,3 @@
-var input = require('fs').readFileSync('stdin', 'utf8');
-var lines = input.split('\n');
-
-
-
 function titleCase(str) {
   
   let aux = str.split(' ')
@@ -19,8 +14,3 @@ function titleCase(str) {
     let finalStr = aux.join(' ')
     return finalStr;
   }
-  
-  titleCase("I'm a little tea pot");
-
-
-  
