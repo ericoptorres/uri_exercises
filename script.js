@@ -9,6 +9,7 @@ function titleCase(str) {
   let size = 0
 
   while (size < aux.length){
+    aux[size] = aux[size].toLowerCase()
     let aux2 = aux[size].split('')
     aux2[0] = aux2[0].toUpperCase()
     
@@ -17,10 +18,11 @@ function titleCase(str) {
     size++
   }
     let finalStr = aux.join(' ')
+    console.log(finalStr)
     return finalStr;
   }
   
-  titleCase("I'm a little tea pot");
+  titleCase("sHoRt AnD sToUt");
 
 
   
