@@ -1,0 +1,15 @@
+function bouncer(arr) {
+    let newArr = arr.slice()
+    let finalArr = []
+    let i = 0
+
+    while (i < newArr.length){
+        if(newArr[i]){
+            finalArr.splice(i, 1, newArr[i])
+        }
+        i++
+    }
+    return finalArr;
+  }
+  
+  bouncer([7, "ate", "", false, 9]);
