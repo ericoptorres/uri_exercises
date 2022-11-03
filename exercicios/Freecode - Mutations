@@ -1,20 +1,24 @@
-var input = require('fs').readFileSync('stdin', 'utf8');
-var lines = input.split('\n');
-
 function mutation(arr) {
 
-    let i = 0
-    while (i < arr[1].length){
-        
-    }
+  let j = 0
+  let count = 0
 
+  arr[0] = arr[0].toLowerCase()
+  arr[1] = arr[1].toLowerCase()
+  
+      while (j <= arr[1].length){
+          if (arr[0].indexOf(arr[1][j]) !== -1){
+              count ++
+          }
 
-    arr[0].indexof(arr[1])
+          j++
+      }
 
-
-
-
-  return arr;
+if (count >= arr[1].length){
+  return true
 }
 
-mutation(["hello", "hey"]);
+return false;
+}
+
+mutation(["hello", "Hello"]);
