@@ -1,0 +1,12 @@
+function findElement(arr, func) {
+    let i = 0
+
+    while (i < arr.length){
+        if (func(arr[i]) == true){
+            return arr[i]
+        }
+        i++
+    }
+
+    return undefined;
+  }
