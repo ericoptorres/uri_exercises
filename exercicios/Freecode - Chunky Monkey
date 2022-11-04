@@ -5,25 +5,21 @@ function chunkArrayInGroups(arr, size) {
     let i = (arr.length) / size
 
     while (i > 0){
-    let j = size
-    
-    while (j){
-
-        let element = arr.shift()
-        if (element || element == 0){
-        newArr.push(element)
+        let j = size
+        
+        while (j){
+            let element = arr.shift()
+                if (element || element == 0){
+                newArr.push(element)
+                }
+            
+            j--
         }
-        console.log(newArr)
-        j--
-    }
-    let aux = newArr.slice('')
-    finalArr.push(aux)
-    newArr = []
-    i--
-    }
-
-
-    console.log(finalArr)
+        let aux = newArr.slice('')
+        finalArr.push(aux)
+        newArr = []
+        i--
+        }
 
     return finalArr;
   }
