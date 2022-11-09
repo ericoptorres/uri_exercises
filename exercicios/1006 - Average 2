@@ -1,0 +1,9 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+
+let [a , b, c] = [lines.shift(), lines.shift(), lines.shift()]
+
+let total = ((a * 2) + (b * 3) + (c * 5)) / 10
+
+console.log('MEDIA =', total.toFixed(1))
