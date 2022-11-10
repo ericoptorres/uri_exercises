@@ -1,0 +1,16 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+
+let i = 0
+let count = 0
+
+while (i < 6) {
+    let value = parseInt(lines.shift())
+    if (value > 0){
+        count++
+    }
+    i++
+}
+
+console.log(count, "valores positivos")
