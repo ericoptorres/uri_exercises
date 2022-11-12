@@ -1,0 +1,17 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+
+let number
+let i = 0
+let count = 0
+
+while (i < 5){
+    number = parseInt(lines.shift())
+    if (number % 2 == 0){
+        count++
+    }
+    i++
+}
+
+console.log(count, 'valores pares')
