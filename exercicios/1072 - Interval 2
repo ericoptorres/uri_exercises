@@ -1,0 +1,23 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+const N = parseInt(lines.shift())
+
+let i = 0
+let x 
+let xIn = 0
+let xOut = 0
+
+while (i < N){
+    x = parseInt(lines.shift())
+    if (x >= 10 && x <= 20){
+        xIn++
+    }
+    else{
+        xOut++
+    }
+    i++
+}
+
+console.log(`${xIn} in
+${xOut} out`)
