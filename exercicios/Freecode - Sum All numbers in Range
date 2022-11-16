@@ -1,0 +1,15 @@
+function sumAll(arr) {
+
+  let sortedArr = arr.sort((a, b) => a - b)
+  
+  let i = sortedArr[0]
+  let sum = 0
+  while (i <= sortedArr[1]){
+    sum += i
+    i++
+  }
+ 
+  return sum
+  }
+  
+  console.log(sumAll([1, 4]));
