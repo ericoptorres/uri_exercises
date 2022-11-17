@@ -1,0 +1,15 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+
+let cases = parseInt(lines.shift())
+
+lines.map((hero) => {
+  isWorthy = hero.split(' ')
+  if (isWorthy[0] === 'Thor'){
+    console.log('Y')
+  }
+  else{
+    console.log('N')
+  }
+})
