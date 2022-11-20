@@ -1,0 +1,25 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+function destroyer(arr, ...args) {
+      let finalArr = []
+      let toRemove = args
+
+      for (let i = 0; i < arr.length; i++){
+            let willRemove = false
+            for (let j = 0; j < toRemove.length; j++){
+                  if (arr[i] === toRemove[j]){
+                        willRemove = true
+                  }
+            }
+
+            if (willRemove == false){
+                  finalArr.push(arr.slice(i, i+1)[0])
+            }
+
+            }
+
+    return finalArr;
+  }
+  
+  console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
