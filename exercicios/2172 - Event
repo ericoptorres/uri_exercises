@@ -1,0 +1,12 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+let exp = lines.map((element) => {
+  let x = element.split(' ')
+  if (x[0] == 0){
+    return 0
+  }
+  let times = x[0]
+  let exp = x[1]
+  console.log(times * exp)
+})
