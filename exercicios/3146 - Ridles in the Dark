@@ -1,0 +1,8 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+const radius = parseFloat(lines.shift())
+
+let ringArea = 2 * 3.14 * radius
+
+console.log(ringArea.toFixed(2))
