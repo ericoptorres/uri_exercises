@@ -1,0 +1,28 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+function whatIsInAName(collection, source) {
+
+    const sourceKeys = Object.keys(source)
+
+    let newArr = collection.filter((element) => {
+        const elementKeys = Object.keys(element)
+        let isInside = true
+
+        sourceKeys.map((key) => {
+            if (source[key] !== element[key]){
+                isInside = false
+            }
+
+        })
+        return isInside        
+    })
+
+    return newArr
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
+
+
+
