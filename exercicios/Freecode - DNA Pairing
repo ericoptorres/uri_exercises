@@ -1,0 +1,23 @@
+function pairElement(str) {
+
+    let newStr = str.split('')
+
+    let final = newStr.map((element) => {
+        if (element === "G"){
+            return [element, "C"]
+        }
+        else if (element === "C"){
+            return [element, "G"]
+        }
+        else if (element === "T"){
+            return [element, "A"]
+        }
+        else if (element === "A"){
+            return [element, "T"]
+        }
+    })
+    
+    return final;
+  }
+
+  console.log(pairElement("ATCGA"));
