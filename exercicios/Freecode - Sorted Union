@@ -1,0 +1,15 @@
+function uniteUnique(...arr) {
+
+    let finalArr = []
+
+    arr.map(elementArr => {
+        elementArr.map(element => {
+            if (!finalArr.includes(element)){
+                finalArr.push(element)
+            }
+        })
+    })
+    return finalArr;
+  }
+  
+  uniteUnique([1, 3, 2, 3], [5, 2, 1, 4], [2, 1]);
