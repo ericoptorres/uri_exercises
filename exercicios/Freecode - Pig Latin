@@ -1,0 +1,41 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+function translatePigLatin(str) {
+
+    let word = str.split('')
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    let consonantClusterIndex = -1
+    let i = 0
+    const isVowel = (element) => (vowels.indexOf(element) != -1)
+    let aux
+
+    if(isVowel(word[0])){
+        word.push('way')
+        word = word.join('')
+    }
+
+    else{
+        while (!isVowel(word[i])){
+            consonantClusterIndex++
+            i++
+        }
+        
+        aux = word.splice(0, consonantClusterIndex + 1)
+        aux = aux.join('')
+        word.push(aux)
+        word.push('ay')
+        word = word.join('')
+        
+    }
+    return word;
+  }
+  
+  translatePigLatin("algorithm");
+  console.log(translatePigLatin("algorithm"));
+
+//- If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add ay to it.
+
+//- If a word begins with a vowel, just add 'way' at the end.
+
+
