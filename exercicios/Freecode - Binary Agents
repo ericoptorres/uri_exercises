@@ -1,0 +1,25 @@
+function binaryAgent(str) {
+
+    let letters = str.split(' ')
+
+    let aux = letters.map(element => element.split('').reverse())
+    
+    let lettersIntoNum = aux.map(element => {
+        return element.map(elem => parseInt(elem))
+    })
+    
+    const convertingToDecimal = (arrayOfNumbers) => {
+        return arrayOfNumbers.reduce((total, element, index) => {
+            return element * (2 ** index) + total
+        }, 0)
+    }
+    
+    let lettersIntoDecimals = lettersIntoNum.map(element => convertingToDecimal(element))
+
+    let frase = String.fromCharCode(...lettersIntoDecimals)
+
+    return frase;
+  }
+  
+  binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+
