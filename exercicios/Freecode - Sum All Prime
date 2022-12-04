@@ -1,0 +1,26 @@
+function sumPrimes(num) {
+
+    const isPrime = (number) => {
+        let divisor = 2
+        while (divisor < number){
+            if (number % divisor === 0){
+                return false
+            }
+            divisor ++
+        }
+        return true
+    }
+
+    let current = 2
+    let total = 0
+
+    while (current <= num){
+        if (isPrime(current)){
+            total += current
+        }
+        current++
+    }
+    console.log(total)
+    return total;
+  }
+sumPrimes(10);
