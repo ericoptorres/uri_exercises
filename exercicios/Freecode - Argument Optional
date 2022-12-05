@@ -1,0 +1,22 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+
+function addTogether(...arg) {
+    
+
+    if (arg.length == 1){
+        if (typeof(arg) != 'number'){
+            return undefined
+        }
+        return (a) => a + arg
+    }
+    else{
+        if (typeof(arg[0]) != 'number' || typeof(arg[1]) != 'number'){
+            return undefined
+        }
+        return arg[0] + arg[1]
+    }
+
+}
+  
+addTogether(2)([3]);
