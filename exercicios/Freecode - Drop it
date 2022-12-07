@@ -1,0 +1,20 @@
+function dropElements(arr, func) {
+
+    let i = true
+    const final = arr.filter((element) => {
+        if (i){
+            if (func(element)){
+                i = false
+                return true
+            }
+            
+        }
+        else{
+            return true
+        }
+    })
+
+    return final;
+  }
+  
+  dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;});
